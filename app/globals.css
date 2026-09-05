@@ -4,9 +4,14 @@
 
   --font-body: var(--font-geist-sans), sans-serif;
   --font-heading: var(--font-league-gothic), sans-serif;
+  --font-brand: var(--font-geist-sans), sans-serif;
+  --font-weight-brand: 900;
+  --font-size-brand: clamp(28px, 4vw, 48px);
+  --letter-spacing-brand: -0.06em;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
   --font-size-label: 12px;
+  --font-size-navigation-desktop: 16px;
   --font-size-body: 18px;
   --font-size-heading: clamp(24px, 4vw, 48px);
   --font-size-display: clamp(72px, 14vw, 190px);
@@ -25,7 +30,16 @@
   --space-24: 24px;
 
   --layout-text-max: 620px;
+  --layout-page-gutter: clamp(var(--space-20), 3.25vw, var(--space-2xl));
+  --layout-page-gutter-block: var(--space-24);
+  --line-height-navigation: 1;
+  --size-interactive-min: 44px;
   --border-width: 1px;
+  --motion-duration-menu: 220ms;
+  --motion-duration-hover: 180ms;
+  --motion-duration-menu-item: 180ms;
+  --motion-stagger-menu-item: 40ms;
+  --motion-easing-menu: ease-in-out;
 }
 
 html,
@@ -35,8 +49,15 @@ body {
   overflow-x: hidden;
 }
 
+.pageContainer {
+  min-height: 100svh;
+  padding: var(--layout-page-gutter-block) var(--layout-page-gutter);
+}
+
 body {
   font-family: var(--font-body);
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
 h1,

@@ -1,5 +1,6 @@
 import { Geist, League_Gothic } from "next/font/google";
 import "./globals.css";
+import Navigation from "@/app/components/Navigation/Navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,7 +13,10 @@ const leagueGothic = League_Gothic({
 });
 
 export const metadata = {
-  title: "ATYPIQUE. | Studio indépendant de développement web",
+  title: {
+    default: "ATYPIQUE. | Studio indépendant de développement web",
+    template: "%s | ATYPIQUE.",
+  },
   description:
     "ATYPIQUE., studio indépendant de développement web : missions freelance back-end, création de projets web complets et expériences interactives dans le Lab.",
 };
@@ -23,7 +27,12 @@ export default function RootLayout({ children }) {
       lang="fr"
       className={`${geistSans.variable} ${leagueGothic.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <div className="pageContainer">
+          <Navigation />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

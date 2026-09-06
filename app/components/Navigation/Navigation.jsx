@@ -2,12 +2,19 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./Navigation.module.css";
 import { createMenuMotion } from "./menuMotion";
 
-const navigationItems = ["Studio", "Le Lab", "Projets", "Contact"];
+const navigationItems = [
+  { label: "Studio", href: "/studio" },
+  { label: "Le Lab", href: "/lab" },
+  { label: "Projets", href: "/projets" },
+  { label: "Contact", href: "/contact" },
+];
 
 export default function Navigation() {
+  const pathname = usePathname().replace(/\/$/, "") || "/";
   const [menuState, setMenuState] = useState("closed");
   const isOpen = menuState === "opening" || menuState === "open";
   const menuId = useId();
@@ -62,15 +69,19 @@ export default function Navigation() {
       </button>
       <nav id={menuId} className={styles.navigation} data-state={menuState} inert={menuState === "closing"} aria-label="Navigation principale">
         <ul ref={listRef} className={styles.list}>
-          {navigationItems.map((label) => (
+          {navigationItems.map(({ label, href }) => (
             <li
               key={label}
               className={styles.menuEntry}
             >
-              {/* Les destinations seront ajoutées avec les pages ou sections. */}
-              <span className={styles.item} aria-disabled="true">
+              <Link
+                href={href}
+                className={styles.item}
+                aria-current={pathname === href ? "page" : undefined}
+                onNavigate={() => motionRef.current?.close()}
+              >
                 {label}
-              </span>
+              </Link>
             </li>
           ))}
         </ul>

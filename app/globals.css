@@ -1,6 +1,9 @@
 :root {
   --color-background: #f2efea;
   --color-text: #11100f;
+  --color-accent: #a64724;
+  --color-accent-hover: #84381d;
+  --color-on-accent: #ffffff;
 
   --font-body: var(--font-geist-sans), sans-serif;
   --font-heading: var(--font-league-gothic), sans-serif;
@@ -20,6 +23,15 @@
   --line-height-heading: 0.9;
   --line-height-body: 1.45;
   --letter-spacing-label: 0.04em;
+  --font-size-hero: 27cqw;
+  --font-size-hero-mobile: 27cqw;
+  --line-height-hero: 0.9;
+  --line-height-hero-mobile: 0.96;
+  --layout-hero-intro-reserve: 112px;
+  --layout-hero-intro-reserve-compact: 208px;
+  --layout-hero-intro-width: 42%;
+  --layout-hero-intro-offset: 0.5;
+  --layout-page-max: max(900px, 112svh);
 
   --space-sm: 8px;
   --space-md: 16px;
@@ -54,6 +66,9 @@ body {
   flex-direction: column;
   min-height: 100svh;
   padding: var(--layout-page-gutter-block) var(--layout-page-gutter);
+  width: 100%;
+  max-width: var(--layout-page-max);
+  margin-inline: auto;
 }
 
 body {

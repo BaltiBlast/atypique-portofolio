@@ -32,6 +32,10 @@
   --size-projects-outline: clamp(1px, 0.15cqw, 2px);
   --size-projects-arrow: 0.8em;
   --space-projects-block: clamp(var(--space-lg), 6cqw, var(--space-2xl));
+  --font-size-footer-brand: clamp(48px, 32cqw, 112px);
+  --letter-spacing-footer: 0.08em;
+  --color-footer-rule: #888581;
+  --size-footer-icon: 24px;
   --line-height-display: 0.84;
   --line-height-heading: 0.9;
   --line-height-body: 1.45;

@@ -1,6 +1,7 @@
 import { Geist, League_Gothic } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/app/components/Navigation/Navigation";
+import Footer from "@/app/components/Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <div className="pageContainer">
           <Navigation />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

@@ -25,6 +25,13 @@
   --layout-service-number-width: 28%;
   --layout-service-rule-width: 12cqw;
   --size-service-rule: clamp(2px, 0.8cqw, 8px);
+  --font-size-projects-title: 10.5cqw;
+  --font-size-projects-title-mobile: 14cqw;
+  --letter-spacing-projects-title: -0.055em;
+  --line-height-projects-title: 0.9;
+  --size-projects-outline: clamp(1px, 0.15cqw, 2px);
+  --size-projects-arrow: 0.8em;
+  --space-projects-block: clamp(var(--space-lg), 6cqw, var(--space-2xl));
   --line-height-display: 0.84;
   --line-height-heading: 0.9;
   --line-height-body: 1.45;

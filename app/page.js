@@ -1,5 +1,6 @@
 import Hero from "./components/Hero/Hero";
 import ServiceSection from "./components/ServiceSection/ServiceSection";
+import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -46,6 +47,7 @@ export default function Home() {
       {serviceSections.map((section) => (
         <ServiceSection key={section.id} {...section} />
       ))}
+      <ProjectsSection />
     </main>
   );
 }

@@ -7,6 +7,7 @@ import styles from "./Navigation.module.css";
 import { createMenuMotion } from "./menuMotion";
 
 const navigationItems = [
+  { label: "Renfort", href: "/renfort" },
   { label: "Studio", href: "/studio" },
   { label: "Le Lab", href: "/lab" },
   { label: "Projets", href: "/projets" },

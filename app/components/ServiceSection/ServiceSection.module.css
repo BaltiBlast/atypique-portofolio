@@ -1,0 +1,194 @@
+.section {
+  position: relative;
+  container-type: inline-size;
+  padding-block: var(--space-lg);
+}
+
+.section::before,
+.section::after {
+  content: "";
+  position: absolute;
+  inset-inline: calc((100% - 100vw) / 2);
+  border-top: var(--border-width) solid var(--color-text);
+  pointer-events: none;
+}
+
+.section::before {
+  top: 0;
+}
+
+.section::after {
+  bottom: 0;
+}
+
+.layout {
+  --column-gap: clamp(var(--space-sm), 2cqw, var(--space-24));
+
+  display: grid;
+  grid-template-columns:
+    max-content
+    minmax(var(--layout-service-rule-width), 1fr)
+    minmax(0, calc(100% - var(--layout-service-number-width) - var(--layout-service-rule-width) - 2 * var(--column-gap)));
+  align-items: start;
+  column-gap: var(--column-gap);
+}
+
+.number {
+  align-self: center;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-service-number);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+}
+
+.rule {
+  visibility: hidden;
+  width: var(--layout-service-rule-width);
+  justify-self: center;
+  height: var(--size-service-rule);
+  margin-top: calc(var(--font-size-service-title) * var(--line-height-heading) * 0.75);
+  background: var(--color-text);
+}
+
+.content {
+  min-width: 0;
+  align-self: center;
+}
+
+.title {
+  position: relative;
+  inset-inline-start: var(--offset-service-title-inline);
+  font-size: var(--font-size-service-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.secondaryCta {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: var(--size-interactive-min);
+  margin-top: var(--space-sm);
+  color: var(--color-text);
+  font-size: var(--font-size-navigation-desktop);
+  line-height: var(--line-height-body);
+  text-underline-offset: var(--space-sm);
+  overflow-wrap: anywhere;
+}
+
+.secondaryCta:hover,
+.secondaryCta:active {
+  color: var(--color-accent-hover);
+}
+
+.secondaryCta:focus-visible {
+  outline: calc(var(--border-width) * 2) solid var(--color-accent);
+  outline-offset: var(--space-sm);
+}
+
+.description {
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-navigation-desktop);
+  line-height: var(--line-height-body);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  max-width: 100%;
+  min-width: 0;
+  min-height: var(--size-interactive-min);
+  padding: var(--space-md) var(--space-20);
+  border: var(--border-width) solid var(--color-accent);
+  color: var(--color-on-accent);
+  background: var(--color-accent);
+  font-size: var(--font-size-navigation-desktop);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-body);
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.cta:hover,
+.cta:active {
+  border-color: var(--color-accent-hover);
+  background: var(--color-accent-hover);
+}
+
+.cta:focus-visible {
+  outline: calc(var(--border-width) * 2) solid var(--color-accent);
+  outline-offset: var(--space-sm);
+}
+
+.arrow {
+  flex-shrink: 0;
+}
+
+.section + .section::before {
+  display: none;
+}
+
+@media (width < 768px) {
+  .rule {
+    visibility: visible;
+  }
+
+  .fullWidthContentOnMobile .content {
+    display: contents;
+  }
+
+  .fullWidthContentOnMobile .eyebrow {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .fullWidthContentOnMobile .number {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+  }
+
+  .fullWidthContentOnMobile .rule {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    margin-top: 0;
+  }
+
+  .fullWidthContentOnMobile .title {
+    grid-column: 3;
+    grid-row: 2;
+    align-self: center;
+  }
+
+  .fullWidthContentOnMobile .description,
+  .fullWidthContentOnMobile .cta,
+  .fullWidthContentOnMobile .secondaryCta {
+    grid-column: 1 / -1;
+  }
+
+  .section {
+    padding-block: var(--space-24);
+  }
+
+  .cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}

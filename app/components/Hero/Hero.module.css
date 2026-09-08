@@ -103,8 +103,10 @@
 
 @media (width < 768px) {
   .hero {
+    container-type: inline-size;
+    height: auto;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: minmax(0, max-content) auto;
+    grid-template-rows: auto auto;
     align-content: start;
     gap: clamp(var(--space-md), 3svh, var(--space-lg));
     padding-top: clamp(var(--space-md), 4svh, var(--space-xl));
@@ -113,14 +115,8 @@
   .title {
     display: block;
     grid-area: 1 / 1;
-    container-type: size;
-    contain-intrinsic-block-size: calc(var(--font-size-hero-mobile) * 3 * var(--line-height-hero-mobile));
-    min-height: 0;
+    font-size: min(var(--font-size-hero-mobile), var(--font-size-hero-mobile-height-limit));
     line-height: var(--line-height-hero-mobile);
-  }
-
-  .line {
-    font-size: min(var(--font-size-hero-mobile), calc(100cqh / 3 / var(--line-height-hero-mobile)));
   }
 
   .introduction {

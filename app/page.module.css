@@ -1,6 +1,17 @@
 .page {
   min-width: 0;
-  height: calc(100svh - var(--layout-page-gutter-block) * 2 - max(var(--size-interactive-min), var(--font-size-brand)));
+}
+
+.heroFrame {
+  --hero-max-height: calc(100svh - var(--layout-page-gutter-block) * 2 - max(var(--size-interactive-min), var(--font-size-brand)));
+  height: var(--hero-max-height);
   padding-top: var(--space-md);
   min-height: 0;
+}
+
+@media (width < 768px) {
+  .heroFrame {
+    height: auto;
+    padding-bottom: var(--space-lg);
+  }
 }

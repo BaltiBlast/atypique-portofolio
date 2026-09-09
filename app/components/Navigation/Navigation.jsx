@@ -68,13 +68,16 @@ export default function Navigation() {
           <path className={styles.bottomLine} d="M3 18h18" />
         </svg>
       </button>
-      <nav id={menuId} className={styles.navigation} data-state={menuState} inert={menuState === "closing"} aria-label="Navigation principale">
+      <nav
+        id={menuId}
+        className={styles.navigation}
+        data-state={menuState}
+        inert={menuState === "closing"}
+        aria-label="Navigation principale"
+      >
         <ul ref={listRef} className={styles.list}>
           {navigationItems.map(({ label, href }) => (
-            <li
-              key={label}
-              className={styles.menuEntry}
-            >
+            <li key={label} className={styles.menuEntry}>
               <Link
                 href={href}
                 className={styles.item}

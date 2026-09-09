@@ -19,7 +19,6 @@ export default function ProjectsSection() {
         <p className={styles.description}>Produits professionnels, missions en renfort et créations atypiques.</p>
         <Link href="/projets/" className={styles.link}>
           <span>Voir tous les projets</span>
-          <span aria-hidden="true">→</span>
         </Link>
       </div>
     </section>

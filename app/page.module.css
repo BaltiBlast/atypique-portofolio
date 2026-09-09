@@ -5,7 +5,7 @@
 .heroFrame {
   --hero-max-height: calc(100svh - var(--layout-page-gutter-block) * 2 - max(var(--size-interactive-min), var(--font-size-brand)));
   height: var(--hero-max-height);
-  padding-top: var(--space-md);
+  padding-top: var(--space-xl);
   min-height: 0;
 }
 

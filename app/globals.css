@@ -65,6 +65,7 @@
   --line-height-navigation: 1;
   --size-interactive-min: 44px;
   --border-width: 1px;
+  --z-navigation: 10;
   --motion-duration-menu: 220ms;
   --motion-duration-hover: 180ms;
   --motion-duration-menu-item: 180ms;

@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: var(--z-navigation);
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -86,6 +88,7 @@
 }
 
 .item {
+  position: relative;
   color: inherit;
   text-decoration: none;
   display: flex;
@@ -98,28 +101,32 @@
   text-transform: uppercase;
 }
 
+.item[aria-current="page"] {
+  color: var(--color-accent);
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: var(--space-sm);
+  height: var(--border-width);
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--motion-duration-hover) var(--motion-easing-menu);
+}
+
+.item[aria-current="page"]::after,
+.item:hover::after,
+.item:focus-visible::after,
+.item:active::after {
+  transform: scaleX(1);
+}
+
 @media (width >= 768px) {
   .item {
-    position: relative;
     font-size: var(--font-size-navigation-desktop);
-  }
-
-  .item::after {
-    content: "";
-    position: absolute;
-    inset-inline: 0;
-    bottom: var(--space-sm);
-    height: var(--border-width);
-    background: currentColor;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--motion-duration-hover) var(--motion-easing-menu);
-  }
-
-  .item:hover::after,
-  .item:focus-visible::after,
-  .item:active::after {
-    transform: scaleX(1);
   }
 }
 
@@ -130,24 +137,38 @@
 
   .navigation {
     display: none;
-    grid-column: 1 / -1;
-    justify-self: end;
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline-end: 0;
+    padding: var(--space-md);
+    background: var(--color-background);
+    transition: background-color var(--motion-duration-menu) var(--motion-easing-menu);
   }
 
   .navigation:not([data-state="closed"]) {
     display: block;
   }
 
+  .navigation[data-state="closing"] {
+    background: transparent;
+  }
+
+  /* Keep links hidden when their animations are cancelled, before React
+     commits the closed state. Active animations override this fallback. */
+  .navigation[data-state="closing"] .menuEntry {
+    opacity: 0;
+  }
+
   .list {
     flex-direction: column;
     align-items: flex-end;
     gap: var(--space-sm);
-    padding-top: var(--space-md);
   }
 
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .navigation,
   .item::after,
   .topLine,
   .middleLine,

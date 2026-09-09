@@ -25,9 +25,9 @@ export default function ServiceSection({
             </Link>
           )}
           {secondaryCtaLabel && secondaryCtaHref && (
-            <Link href={secondaryCtaHref} className={styles.secondaryCta}>
+            <a href={secondaryCtaHref} className={styles.secondaryCta}>
               {secondaryCtaLabel}
-            </Link>
+            </a>
           )}
         </div>
       </div>

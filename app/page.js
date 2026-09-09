@@ -21,7 +21,7 @@ const serviceSections = [
     ctaLabel: "Découvrir mon expertise",
     ctaHref: "/renfort/",
     secondaryCtaLabel: "Voir les projets en renfort",
-    secondaryCtaHref: "/projets/",
+    secondaryCtaHref: "/projets/#renfort",
   },
   {
     id: "studio",
@@ -34,7 +34,7 @@ const serviceSections = [
     ctaLabel: "Parlons de votre projet",
     ctaHref: "/contact/",
     secondaryCtaLabel: "Voir les projets du Studio",
-    secondaryCtaHref: "/projets/",
+    secondaryCtaHref: "/projets/#studio",
   },
 ];
 

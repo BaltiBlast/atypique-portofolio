@@ -89,6 +89,19 @@
   grid-column: 1 / -1;
 }
 
+.formStatus {
+  grid-column: 1 / -1;
+  min-height: 1.5em;
+  color: var(--color-accent);
+  font-size: var(--font-size-navigation-desktop);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-body);
+}
+
+.formStatus:empty {
+  display: none;
+}
+
 .field label,
 .fieldWide label {
   display: flex;

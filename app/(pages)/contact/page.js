@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import ContactNeedSelect from "./ContactNeedSelect";
+import Web3FormsForm from "./Web3FormsForm";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -32,7 +33,11 @@ export default function ContactPage() {
           <h2 id="form-title" className={styles.sectionTitle}>
             Votre projet
           </h2>
-          <form className={styles.form}>
+          <Web3FormsForm
+            accessKey={process.env.KEY_WEB3FORMS}
+            className={styles.form}
+            statusClassName={styles.formStatus}
+          >
             <div className={styles.fieldWide}>
               <label htmlFor="need">
                 <span className={styles.labelText}>
@@ -102,11 +107,11 @@ export default function ContactPage() {
                 Les informations saisies seront utilisées uniquement pour répondre à votre demande. Les champs marqués
                 d’un * sont obligatoires.
               </p>
-              <button type="submit" disabled>
+              <button type="submit">
                 Envoyer ma demande
               </button>
             </div>
-          </form>
+          </Web3FormsForm>
         </div>
       </section>
     </main>

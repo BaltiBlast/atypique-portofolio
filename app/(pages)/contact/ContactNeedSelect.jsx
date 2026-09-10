@@ -15,6 +15,13 @@ export default function ContactNeedSelect() {
     setSelectedNeed(prefilledNeed);
   }, [prefilledNeed]);
 
+  useEffect(() => {
+    const resetSelection = () => setSelectedNeed("");
+
+    document.addEventListener("contact-form-reset", resetSelection);
+    return () => document.removeEventListener("contact-form-reset", resetSelection);
+  }, []);
+
   return (
     <select
       id="need"

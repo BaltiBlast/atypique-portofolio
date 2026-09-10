@@ -59,7 +59,7 @@
 }
 
 .primaryCta:focus-visible,
-.projectLink:focus-visible {
+.projectVisual:focus-visible {
   outline: calc(var(--border-width) * 2) solid var(--color-accent);
   outline-offset: var(--space-sm);
 }
@@ -167,15 +167,21 @@
 }
 
 .projectVisual {
+  position: relative;
   display: flex;
   align-items: flex-end;
+  width: 100%;
   aspect-ratio: 4 / 3;
   padding: var(--space-24);
   border: var(--border-width) solid var(--color-text);
+  color: var(--color-text);
+  background: transparent;
+  cursor: pointer;
   overflow: hidden;
+  text-align: left;
 }
 
-.projectVisual span {
+.projectNumber {
   color: transparent;
   font-family: var(--font-heading);
   font-size: clamp(120px, 26cqw, 360px);
@@ -184,6 +190,29 @@
   letter-spacing: -0.06em;
   -webkit-text-stroke: var(--size-projects-outline) var(--color-text);
   transform: translate(-0.04em, 0.08em);
+}
+
+.projectVisualLabel {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: var(--space-sm) var(--space-md);
+  border-top: var(--border-width) solid var(--color-accent);
+  border-left: var(--border-width) solid var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-background);
+  font-family: var(--font-body);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.projectVisual:hover .projectVisualLabel,
+.projectVisual:active .projectVisualLabel {
+  color: var(--color-on-accent);
+  background: var(--color-accent-hover);
 }
 
 .projectMeta {
@@ -217,24 +246,6 @@
   margin-top: var(--space-md);
   font-size: var(--font-size-navigation-desktop);
   line-height: var(--line-height-body);
-}
-
-.projectLink {
-  display: inline-flex;
-  align-items: center;
-  min-height: var(--size-interactive-min);
-  margin-top: var(--space-md);
-  color: var(--color-accent);
-  font-size: var(--font-size-navigation-desktop);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-body);
-  text-transform: uppercase;
-  text-underline-offset: var(--space-sm);
-}
-
-.projectLink:hover,
-.projectLink:active {
-  color: var(--color-accent-hover);
 }
 
 @media (width < 768px) {

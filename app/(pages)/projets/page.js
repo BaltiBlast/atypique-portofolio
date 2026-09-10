@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProjectModal from "./ProjectModal/ProjectModal";
 import styles from "./page.module.css";
 import { projects } from "./projectsData";
 
@@ -38,18 +39,23 @@ export default function ProjetsPage() {
         <div className={styles.projectGrid}>
           {projects.map((project, index) => (
             <article className={styles.project} data-project={project.slug} data-origin={project.origin} key={project.slug}>
-              <div className={styles.projectVisual} aria-hidden="true">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-              </div>
+              <button
+                type="button"
+                className={styles.projectVisual}
+                data-open-project={project.slug}
+                aria-label={`Découvrir le projet ${project.title}`}
+              >
+                <span className={styles.projectNumber} aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className={styles.projectVisualLabel}>Découvrir le projet</span>
+              </button>
               <div className={styles.projectMeta}>
                 <p>{project.originLabel}</p>
                 <p>{project.status}</p>
               </div>
               <h2>{project.title}</h2>
               <p className={styles.projectDescription}>{project.description}</p>
-              {project.liveUrl && (
-                <a href={project.liveUrl} className={styles.projectLink}>Visiter le projet</a>
-              )}
             </article>
           ))}
         </div>
@@ -57,6 +63,8 @@ export default function ProjetsPage() {
           Aucun projet ne correspond à ce filtre.
         </p>
       </section>
+
+      <ProjectModal projects={projects} />
     </main>
   );
 }

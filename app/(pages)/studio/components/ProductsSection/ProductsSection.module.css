@@ -1,0 +1,5 @@
+.list { border-top: var(--border-width) solid var(--color-text); }
+.item { display: grid; grid-template-columns: minmax(160px, 1fr) minmax(0, 2fr); gap: var(--space-lg); padding-block: var(--space-20); border-bottom: var(--border-width) solid var(--color-text); }
+.item dt { font-weight: var(--font-weight-bold); text-transform: uppercase; }
+.item dt, .item dd { font-size: var(--font-size-body); line-height: var(--line-height-body); }
+@media (width < 480px) { .item { grid-template-columns: minmax(0, 1fr); gap: var(--space-sm); } }

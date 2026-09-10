@@ -1,10 +1,20 @@
 import Link from "next/link";
 import styles from "./ServiceSection.module.css";
 
-export default function ServiceSection({
-  id, number, eyebrow, title, description, ctaLabel, ctaHref = "/contact/",
-  secondaryCtaLabel, secondaryCtaHref, fullWidthContentOnMobile = false,
-}) {
+export default function ServiceSection({ section }) {
+  const {
+    id,
+    number,
+    eyebrow,
+    title,
+    description,
+    ctaLabel,
+    ctaHref = "/contact/",
+    secondaryCtaLabel,
+    secondaryCtaHref,
+    fullWidthContentOnMobile = false,
+  } = section;
+
   return (
     <section className={styles.section} aria-labelledby={`${id}-title`}>
       <div className={`${styles.layout}${fullWidthContentOnMobile ? ` ${styles.fullWidthContentOnMobile}` : ""}`}>

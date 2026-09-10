@@ -36,6 +36,19 @@ const serviceSections = [
     secondaryCtaLabel: "Voir les projets du Studio",
     secondaryCtaHref: "/projets/#studio",
   },
+  {
+    id: "lab",
+    number: "03",
+    fullWidthContentOnMobile: true,
+    eyebrow: "Pour les idées qui sortent du cadre",
+    title: "Le Lab",
+    description:
+      "J’imagine et développe des outils sur mesure, des dispositifs numériques et des expériences interactives pour concrétiser les projets atypiques. Du logiciel qui pilote un dispositif physique à l’expérience web expérimentale, le Lab permet d’explorer des solutions qui sortent des formats habituels.",
+    ctaLabel: "Parlons de votre projet",
+    ctaHref: "/contact/",
+    secondaryCtaLabel: "Découvrir le Lab",
+    secondaryCtaHref: "/lab/",
+  },
 ];
 
 export default function Home() {

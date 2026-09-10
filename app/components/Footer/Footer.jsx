@@ -21,7 +21,13 @@ export default function Footer() {
       <div className={styles.content}>
         <nav aria-label="Contact et réseaux sociaux" className={styles.contacts}>
           {contactLinks.map(({ label, href, type }) => (
-            <a key={href} href={href} className={styles.contact}>
+            <a
+              key={href}
+              href={href}
+              className={styles.contact}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={href.startsWith("http") ? "noreferrer" : undefined}
+            >
               {type === "email" ? (
                 <svg className={styles.icon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                     <rect x="3" y="5" width="18" height="14" />

@@ -18,8 +18,8 @@ const serviceSections = [
     title: (<>Renfort<br />back-end</>),
     description:
       "J’intègre une équipe existante pour développer des fonctionnalités, renforcer une architecture ou améliorer ses processus techniques.",
-    ctaLabel: "Découvrir mon expertise",
-    ctaHref: "/renfort/",
+    ctaLabel: "Parlons de votre besoin",
+    ctaHref: "/contact/?besoin=renfort",
     secondaryCtaLabel: "Voir les projets en renfort",
     secondaryCtaHref: "/projets/#renfort",
   },
@@ -32,7 +32,7 @@ const serviceSections = [
     description:
       "Je conçois et développe votre site, application ou logiciel, de l’idée jusqu’à sa mise en ligne.",
     ctaLabel: "Parlons de votre projet",
-    ctaHref: "/contact/",
+    ctaHref: "/contact/?besoin=studio",
     secondaryCtaLabel: "Voir les projets du Studio",
     secondaryCtaHref: "/projets/#studio",
   },
@@ -44,8 +44,8 @@ const serviceSections = [
     title: "Le Lab",
     description:
       "J’imagine et développe des outils sur mesure, des dispositifs numériques et des expériences interactives pour concrétiser les projets atypiques. Du logiciel qui pilote un dispositif physique à l’expérience web expérimentale, le Lab permet d’explorer des solutions qui sortent des formats habituels.",
-    ctaLabel: "Parlons de votre projet",
-    ctaHref: "/contact/",
+    ctaLabel: "Donnons forme à votre idée",
+    ctaHref: "/contact/?besoin=lab",
     secondaryCtaLabel: "Découvrir le Lab",
     secondaryCtaHref: "/lab/",
   },

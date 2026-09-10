@@ -153,11 +153,6 @@
   text-transform: uppercase;
 }
 
-.projectMeta p:last-child {
-  color: var(--color-accent);
-  text-align: right;
-}
-
 .project h2 {
   margin-top: var(--space-20);
   font-size: var(--font-size-heading);
@@ -214,7 +209,4 @@
     gap: var(--space-sm);
   }
 
-  .projectMeta p:last-child {
-    text-align: left;
-  }
 }

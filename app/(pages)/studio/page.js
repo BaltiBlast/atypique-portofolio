@@ -45,7 +45,7 @@ export default function StudioPage() {
         </h1>
         <div className={styles.heroIntroduction}>
           <p>Je conçois et développe des sites, applications et logiciels adaptés à votre besoin, de l'idée jusqu'à la mise en ligne.</p>
-          <Link href="/contact/" className={styles.primaryCta}>
+          <Link href="/contact/?besoin=studio" className={styles.primaryCta}>
             <span>Parlons de votre projet</span>
             <span aria-hidden="true">⟶</span>
           </Link>
@@ -114,7 +114,7 @@ export default function StudioPage() {
               </article>
             ))}
           </div>
-          <Link href="/contact/" className={styles.finalCta}>
+          <Link href="/contact/?besoin=studio" className={styles.finalCta}>
             <span>Parlons de votre projet</span>
             <span aria-hidden="true">⟶</span>
           </Link>

@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import ContactNeedSelect from "./ContactNeedSelect";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -40,15 +42,9 @@ export default function ContactPage() {
                   </span>
                 </span>
               </label>
-              <select id="need" name="need" required defaultValue="">
-                <option value="" disabled>
-                  Sélectionnez votre besoin
-                </option>
-                <option value="studio">Création d’un projet avec le Studio</option>
-                <option value="renfort">Mission en renfort back-end</option>
-                <option value="lab">Projet interactif avec le Lab</option>
-                <option value="other">Autre besoin</option>
-              </select>
+              <Suspense fallback={<ContactNeedSelectFallback />}>
+                <ContactNeedSelect />
+              </Suspense>
             </div>
 
             <div className={styles.field}>
@@ -114,5 +110,19 @@ export default function ContactPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+function ContactNeedSelectFallback() {
+  return (
+    <select id="need" name="need" required defaultValue="">
+      <option value="" disabled>
+        Sélectionnez votre besoin
+      </option>
+      <option value="studio">Création d’un projet avec le Studio</option>
+      <option value="renfort">Mission en renfort back-end</option>
+      <option value="lab">Projet interactif avec le Lab</option>
+      <option value="other">Autre besoin</option>
+    </select>
   );
 }

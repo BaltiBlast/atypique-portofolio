@@ -41,8 +41,8 @@ export default function RenfortPage() {
         </h1>
         <div className={styles.heroIntroduction}>
           <p>J’intègre votre équipe pour développer de nouvelles fonctionnalités, améliorer l’existant et faire avancer vos projets.</p>
-          <Link href="/contact/" className={styles.primaryCta}>
-            <span>Échanger sur votre besoin</span>
+          <Link href="/contact/?besoin=renfort" className={styles.primaryCta}>
+            <span>Parlons de votre besoin</span>
             <span aria-hidden="true">⟶</span>
           </Link>
         </div>
@@ -111,8 +111,8 @@ export default function RenfortPage() {
           <h2 id="contact-title">Un besoin côté back-end ?</h2>
           <p>Présentez-moi votre contexte et voyons comment je peux renforcer votre équipe.</p>
         </div>
-        <Link href="/contact/" className={styles.finalCtaLink}>
-          <span>Échanger sur votre besoin</span>
+        <Link href="/contact/?besoin=renfort" className={styles.finalCtaLink}>
+          <span>Parlons de votre besoin</span>
           <span aria-hidden="true">⟶</span>
         </Link>
       </section>

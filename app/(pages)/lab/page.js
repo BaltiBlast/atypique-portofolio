@@ -24,8 +24,8 @@ export default function LabPage() {
             de nouvelles idées et j’y présente les réalisations qui sortent des
             formats habituels.
           </p>
-          <Link href="/contact/" className={styles.primaryCta}>
-            <span>Parlons de votre projet</span>
+          <Link href="/contact/?besoin=lab" className={styles.primaryCta}>
+            <span>Donnons forme à votre idée</span>
             <span aria-hidden="true">⟶</span>
           </Link>
         </div>
@@ -48,7 +48,6 @@ export default function LabPage() {
               </button>
               <div className={styles.projectMeta}>
                 <p>{project.category}</p>
-                <p>{project.status}</p>
               </div>
               <h2>{project.title}</h2>
               <p className={styles.projectDescription}>{project.description}</p>

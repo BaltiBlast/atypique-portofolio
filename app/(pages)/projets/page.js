@@ -52,7 +52,6 @@ export default function ProjetsPage() {
               </button>
               <div className={styles.projectMeta}>
                 <p>{project.originLabel}</p>
-                <p>{project.status}</p>
               </div>
               <h2>{project.title}</h2>
               <p className={styles.projectDescription}>{project.description}</p>

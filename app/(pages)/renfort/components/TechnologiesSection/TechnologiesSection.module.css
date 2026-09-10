@@ -1,0 +1,5 @@
+.list { border-top: var(--border-width) solid var(--color-text); }
+.technology { display: grid; grid-template-columns: minmax(140px, 1fr) minmax(0, 2fr); gap: var(--space-lg); padding-block: var(--space-20); border-bottom: var(--border-width) solid var(--color-text); }
+.technology dt { font-weight: var(--font-weight-bold); text-transform: uppercase; }
+.technology dt, .technology dd { font-size: var(--font-size-navigation-desktop); line-height: var(--line-height-body); }
+@media (width < 480px) { .technology { grid-template-columns: minmax(0, 1fr); gap: var(--space-sm); } }

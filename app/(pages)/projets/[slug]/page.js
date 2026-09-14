@@ -84,26 +84,15 @@ export default async function ProjectPage({ params }) {
 
       {project.caseStudy ? (
         <div className={styles.caseStudy}>
-          <section>
-            <p className={styles.sectionNumber}>01</p>
-            <h2>L’expérience</h2>
-            <p>{project.caseStudy.experience}</p>
-          </section>
-          <section>
-            <p className={styles.sectionNumber}>02</p>
-            <h2>Ma contribution</h2>
-            <p>{project.caseStudy.contribution}</p>
-          </section>
-          <section>
-            <p className={styles.sectionNumber}>03</p>
-            <h2>Collecte des réponses</h2>
-            <p>{project.caseStudy.dataFlow}</p>
-          </section>
-          <section>
-            <p className={styles.sectionNumber}>04</p>
-            <h2>Défis et apprentissages</h2>
-            <p>{project.caseStudy.challenges}</p>
-          </section>
+          {project.caseStudy.sections.map((section, index) => (
+            <section key={section.title}>
+              <p className={styles.sectionNumber}>
+                {String(index + 1).padStart(2, "0")}
+              </p>
+              <h2>{section.title}</h2>
+              <p>{section.content}</p>
+            </section>
+          ))}
         </div>
       ) : null}
 

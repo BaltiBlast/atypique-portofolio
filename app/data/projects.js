@@ -1,5 +1,75 @@
 export const projects = [
   {
+    slug: "le-carrousel-guinguette",
+    title: "Le Carrousel Guinguette",
+    origin: "studio",
+    originLabel: "Projet Studio",
+    category: "Plateforme web et outil de gestion",
+    description:
+      "Une plateforme responsive pour faire connaître une guinguette, publier sa programmation et gérer les réservations.",
+    details:
+      "Le gérant du Carrousel, une guinguette située en Meuse, avait besoin de faire connaître ce nouveau lieu de vie et de centraliser son activité. La solution réunit un site public consacré au lieu et à sa programmation, ainsi qu’un espace d’administration pour gérer les événements, les réservations et le livre d’or.",
+    objectives: [
+      "Faire connaître le lieu et rendre sa programmation accessible en ligne.",
+      "Permettre aux visiteurs de réserver dans la limite des places disponibles.",
+      "Centraliser la gestion des événements, des réservations et du livre d’or.",
+      "Informer automatiquement les visiteurs et l’administrateur aux moments clés.",
+    ],
+    technologies: [
+      "EJS",
+      "Node.js",
+      "Express",
+      "CSS",
+      "MongoDB",
+      "Mongoose",
+      "Web Push",
+      "Nodemailer",
+      "Gemini",
+    ],
+    images: [
+      {
+        src: "/images/projects/carrousel-guinguette/home.png",
+        alt: "Page d’accueil du Carrousel présentant la guinguette et ses prochains événements.",
+      },
+      {
+        src: "/images/projects/carrousel-guinguette/event-details.png",
+        alt: "Page détaillée d’un événement du Carrousel avec son formulaire de réservation.",
+      },
+      {
+        src: "/images/projects/carrousel-guinguette/dashboard-admin.png",
+        alt: "Tableau de bord du Carrousel permettant à l’administrateur de gérer les événements.",
+      },
+    ],
+    status: "En ligne",
+    duration: "10 jours de développement",
+    availability: "Ordinateur, tablette et mobile",
+    liveUrl: "https://le-carrousel-guinguette.fr/",
+    caseStudy: {
+      sections: [
+        {
+          title: "Le site public",
+          content:
+            "Le site présente la guinguette, ses informations pratiques et les événements à venir. Les visiteurs peuvent consulter le détail de chaque rendez-vous, réserver pour un groupe allant jusqu’à 20 personnes dans la limite des places disponibles, puis proposer un message dans le livre d’or. L’ensemble de l’interface est responsive.",
+        },
+        {
+          title: "L’outil de gestion",
+          content:
+            "Depuis un espace protégé par un lien de connexion à usage unique envoyé par e-mail, l’administrateur peut créer, consulter, modifier et supprimer les événements. Il valide ou refuse les demandes de réservation, modère les messages du livre d’or et dispose d’une liste opérationnelle pour accueillir les personnes inscrites le jour de l’événement.",
+        },
+        {
+          title: "Notifications et assistance",
+          content:
+            "Chaque demande de réservation déclenche un e-mail de confirmation. Les visiteurs sont ensuite informés lorsque leur demande est acceptée ou refusée, ainsi qu’en cas d’annulation de l’événement. La PWA installable avertit aussi l’administrateur par notification Web Push lors d’une nouvelle réservation ou d’un nouveau message dans le livre d’or. Dans le back-office, Gemini propose une correction orthographique et une optimisation SEO des événements, que le gérant peut contrôler avant validation.",
+        },
+        {
+          title: "Ma contribution",
+          content:
+            "J’ai pris en charge le projet de bout en bout : compréhension du besoin, conception de l’interface et de la base de données, développement, intégration, déploiement, configuration du nom de domaine et des DNS. J’ai également construit l’identité visuelle avec l’assistance de l’IA. La mise en place des notifications Web Push était une première et m’a permis d’approfondir ce mécanisme sur différents appareils.",
+        },
+      ],
+    },
+  },
+  {
     slug: "stellar-wedding",
     title: "Stellar Wedding",
     origin: "lab",
@@ -37,14 +107,28 @@ export const projects = [
     availability: "Expérience conçue pour ordinateur",
     liveUrl: "https://wedding-game.onrender.com",
     caseStudy: {
-      experience:
-        "Inspirée par l’univers spatial d’Outer Wilds et ponctuée de références à la pop culture, l’expérience invite à incarner la mariée ou le marié, puis à partir sauver l’autre personnage après le crash de son vaisseau sur une planète inconnue. Une série de quêtes permet d’atteindre un premier vaisseau. Les informations nécessaires au décollage prennent alors la forme des réponses attendues par les mariés. Une fois celles-ci renseignées, l’invité pilote le vaisseau, évite des astéroïdes et rejoint la planète où se trouve le personnage à secourir. Le voyage se termine sur un écran de crédits et un formulaire facultatif permettant de laisser un commentaire.",
-      contribution:
-        "J’ai assuré l’intégralité du développement, l’intégration des illustrations fournies par les clients et le déploiement du projet. J’ai programmé les interactions, les réactions des personnages, les dialogues et les animations. Le scénario et ses références ont été imaginés par les clients, puis ajustés avec eux au cours du développement. Musicien, j’ai également réalisé une reprise et un remaster du thème du menu principal d’Outer Wilds pour l’écran-titre, conformément à la direction souhaitée par les mariés.",
-      dataFlow:
-        "L’API développée avec Node.js et Express reçoit les réponses saisies dans le jeu. SheetDB assure ensuite leur transmission vers une feuille Google Sheets, consultable par les mariés pour suivre les réponses des invités.",
-      challenges:
-        "Ce projet m’a amené à sortir des habitudes du développement web classique pour travailler le son, la musique, les interactions et le level design. Ces dimensions devaient fonctionner ensemble pour maintenir la continuité entre le récit, le jeu et la collecte des informations.",
+      sections: [
+        {
+          title: "L’expérience",
+          content:
+            "Inspirée par l’univers spatial d’Outer Wilds et ponctuée de références à la pop culture, l’expérience invite à incarner la mariée ou le marié, puis à partir sauver l’autre personnage après le crash de son vaisseau sur une planète inconnue. Une série de quêtes permet d’atteindre un premier vaisseau. Les informations nécessaires au décollage prennent alors la forme des réponses attendues par les mariés. Une fois celles-ci renseignées, l’invité pilote le vaisseau, évite des astéroïdes et rejoint la planète où se trouve le personnage à secourir. Le voyage se termine sur un écran de crédits et un formulaire facultatif permettant de laisser un commentaire.",
+        },
+        {
+          title: "Ma contribution",
+          content:
+            "J’ai assuré l’intégralité du développement, l’intégration des illustrations fournies par les clients et le déploiement du projet. J’ai programmé les interactions, les réactions des personnages, les dialogues et les animations. Le scénario et ses références ont été imaginés par les clients, puis ajustés avec eux au cours du développement. Musicien, j’ai également réalisé une reprise et un remaster du thème du menu principal d’Outer Wilds pour l’écran-titre, conformément à la direction souhaitée par les mariés.",
+        },
+        {
+          title: "Collecte des réponses",
+          content:
+            "L’API développée avec Node.js et Express reçoit les réponses saisies dans le jeu. SheetDB assure ensuite leur transmission vers une feuille Google Sheets, consultable par les mariés pour suivre les réponses des invités.",
+        },
+        {
+          title: "Défis et apprentissages",
+          content:
+            "Ce projet m’a amené à sortir des habitudes du développement web classique pour travailler le son, la musique, les interactions et le level design. Ces dimensions devaient fonctionner ensemble pour maintenir la continuité entre le récit, le jeu et la collecte des informations.",
+        },
+      ],
     },
   },
   {

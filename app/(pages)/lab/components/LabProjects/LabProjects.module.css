@@ -44,6 +44,12 @@
   transition: transform var(--motion-duration-hover) var(--motion-easing-menu);
 }
 
+.imageContain {
+  padding: clamp(var(--space-lg), 7vw, 80px);
+  object-fit: contain;
+  background: var(--color-background);
+}
+
 .visual:hover .image {
   transform: scale(1.025);
 }

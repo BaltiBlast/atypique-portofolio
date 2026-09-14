@@ -1,5 +1,60 @@
 export const projects = [
   {
+    slug: "avec-fr",
+    title: "Avec.fr",
+    origin: "renfort",
+    originLabel: "Mission en renfort",
+    category: "Téléconsultation et services e-santé",
+    description:
+      "Une mission front-end en renfort consacrée à la téléconsultation et à l’amélioration d’une plateforme de services médicaux.",
+    details:
+      "Le groupe Avec accompagne les personnes au quotidien dans les domaines de la santé et du bien-être, à domicile, en maison de retraite, à l’hôpital et en ville. J’ai rejoint sur place une équipe composée de deux développeurs et d’un DevOps afin de renforcer une application existante de prise de rendez-vous et son tableau de bord destiné aux praticiens et aux établissements de santé.",
+    objectives: [
+      "Intégrer une fonctionnalité de téléconsultation au produit existant.",
+      "Mettre en relation un patient et son praticien dans une salle limitée à deux interlocuteurs.",
+      "Améliorer la fiabilité et les usages du service de prise de rendez-vous.",
+      "Permettre l’échange de documents entre patients et professionnels de santé.",
+    ],
+    technologies: ["React", "WebRTC", "Socket.IO", "Node.js", "Express", "Stockage cloud Google"],
+    images: [
+      {
+        src: "/images/projects/avec/logo-avec.png",
+        alt: "Logo de la plateforme e-santé Avec.fr.",
+      },
+    ],
+    imageFit: "contain",
+    status: "Mission freelance réalisée",
+    duration: "1 an de mission",
+    featureDuration: "1 mois pour la téléconsultation",
+    availability: "Ordinateur, tablette et mobile",
+    liveUrl: "https://groupe.avec.fr/",
+    liveLabel: "Découvrir le groupe Avec",
+    caseStudy: {
+      sections: [
+        {
+          title: "Le contexte",
+          content:
+            "Je suis intervenu comme développeur front-end, avec des contributions côté back-end, au sein d’une application déjà utilisée pour la prise de rendez-vous médicaux et la gestion de l’activité par les praticiens et les établissements. La mission s’est déroulée pendant un an, sur place, dans une organisation en sprints rythmée par des réunions quotidiennes.",
+        },
+        {
+          title: "La téléconsultation",
+          content:
+            "Pendant un mois, j’ai développé l’interface de téléconsultation et sa communication avec le serveur. Elle réunissait la connexion à la salle d’appel, l’affichage de la vidéo et les commandes nécessaires pour gérer le son, le plein écran et la fin de la consultation. La fonctionnalité était utilisable sur ordinateur, tablette et mobile.",
+        },
+        {
+          title: "Communication en temps réel",
+          content:
+            "WebRTC assurait la communication audiovisuelle, tandis que Socket.IO faisait le lien entre le client et le serveur. Je suis également intervenu côté back-end sur la gestion des utilisateurs connectés afin d’associer le patient à son praticien et de limiter chaque salle de téléconsultation à deux interlocuteurs.",
+        },
+        {
+          title: "Une mission plus large",
+          content:
+            "Au-delà de la téléconsultation, j’ai corrigé des anomalies et amélioré plusieurs fonctionnalités de prise de rendez-vous. J’ai notamment contribué à la gestion des créneaux, avec leur verrouillage temporaire pendant une réservation pour éviter les doublons, ainsi qu’aux restrictions de prise de rendez-vous configurables par les cabinets. J’ai aussi participé à l’échange de documents entre patients et praticiens, avec un stockage dans un bucket des services Google.",
+        },
+      ],
+    },
+  },
+  {
     slug: "the-photobooth-project",
     title: "The Photobooth Project",
     origin: "lab",

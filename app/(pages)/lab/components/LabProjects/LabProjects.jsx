@@ -19,7 +19,7 @@ export default function LabProjects({ projects }) {
                   width={1200}
                   height={900}
                   sizes="(max-width: 767px) 100vw, 50vw"
-                  className={styles.image}
+                  className={`${styles.image} ${project.imageFit === "contain" ? styles.imageContain : ""}`}
                   unoptimized
                 />
                 <span className={styles.visualLabel}>Découvrir le projet</span>

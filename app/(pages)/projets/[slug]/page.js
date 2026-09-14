@@ -54,6 +54,12 @@ export default async function ProjectPage({ params }) {
                 <dd>{project.duration}</dd>
               </div>
             ) : null}
+            {project.featureDuration ? (
+              <div>
+                <dt>Focus</dt>
+                <dd>{project.featureDuration}</dd>
+              </div>
+            ) : null}
             {project.availability ? (
               <div>
                 <dt>Support</dt>
@@ -71,7 +77,7 @@ export default async function ProjectPage({ params }) {
           width={1200}
           height={900}
           sizes="(max-width: 1200px) 100vw, 1200px"
-          className={styles.image}
+          className={`${styles.image} ${project.imageFit === "contain" ? styles.imageContain : ""}`}
           priority
           unoptimized
         />
@@ -136,7 +142,7 @@ export default async function ProjectPage({ params }) {
       <footer className={styles.actions}>
         {project.liveUrl ? (
           <a href={project.liveUrl} target="_blank" rel="noreferrer" className={styles.secondaryAction}>
-            <span>Visiter le projet</span>
+            <span>{project.liveLabel ?? "Visiter le projet"}</span>
             <span aria-hidden="true">↗</span>
           </a>
         ) : null}

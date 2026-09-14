@@ -1,5 +1,85 @@
 export const projects = [
   {
+    slug: "gros-event",
+    title: "Gros Event",
+    origin: "studio",
+    originLabel: "Projet Studio",
+    category: "Application événementielle multicanale",
+    description:
+      "Une application privée pour organiser des événements et notifier chaque invité sur les plateformes qu’il utilise.",
+    details:
+      "Gros Event a été conçu pour un grand groupe d’amis dont les membres n’utilisent pas tous les mêmes réseaux. L’application centralise la création et le suivi des événements dans un seul espace, puis distribue les informations sur les canaux choisis par chaque personne. Elle évite ainsi de gérer le même événement séparément sur plusieurs plateformes.",
+    objectives: [
+      "Centraliser la création et la gestion des événements privés.",
+      "Adapter l’envoi des notifications aux préférences de chaque utilisateur.",
+      "Permettre à une personne de participer sans créer de compte.",
+      "Automatiser les rappels et le suivi du cycle de vie des événements.",
+    ],
+    technologies: [
+      "EJS",
+      "CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "Node Cron",
+      "Express Session",
+      "Connect Mongo",
+      "Web Push",
+      "Nodemailer",
+      "API Meta",
+      "Discord Bot",
+      "WhatsApp Bot",
+    ],
+    images: [
+      {
+        src: "/images/projects/event/event-dashboard.png",
+        alt: "Tableau de bord de Gros Event présentant les événements organisés et les invitations reçues.",
+      },
+      {
+        src: "/images/projects/event/create-event.png",
+        alt: "Interface de création d’un événement avec sélection des listes de contacts et des invités.",
+      },
+      {
+        src: "/images/projects/event/dashboard-user.png",
+        alt: "Profil utilisateur de Gros Event avec les préférences de notification par canal.",
+      },
+    ],
+    status: "En ligne, accès privé",
+    duration: "14 jours de développement",
+    availability: "Ordinateur, tablette et mobile",
+    liveUrl: null,
+    caseStudy: {
+      sections: [
+        {
+          title: "Un espace centralisé",
+          content:
+            "Les membres peuvent créer un événement, le conserver en brouillon, le modifier, l’annuler ou le supprimer depuis une interface unique. Ils organisent leurs contacts en listes et peuvent partager ces listes avec d’autres utilisateurs. Une fois l’événement prêt, les invitations sont envoyées sans avoir à reproduire les mêmes opérations sur plusieurs réseaux.",
+        },
+        {
+          title: "Des événements participatifs",
+          content:
+            "Chaque invité peut indiquer s’il sera présent ou absent. Pour un événement participatif, les personnes présentes précisent ce qu’elles souhaitent apporter et consultent les contributions déjà annoncées. Cette visibilité limite les doublons et aide le groupe à identifier ce qui manque encore.",
+        },
+        {
+          title: "Le gestionnaire de notifications",
+          content:
+            "Un gestionnaire de messages commun alimente des connecteurs dédiés à l’e-mail, aux notifications Web Push, à Discord, à Facebook, à Instagram et à WhatsApp. Chaque service récupère le contenu nécessaire avant de l’envoyer sur les canaux sélectionnés. Node Cron programme les rappels, relance une semaine avant l’événement les personnes sans réponse, envoie une notification trois jours avant le jour prévu et actualise le statut des événements passés.",
+        },
+        {
+          title: "Des accès flexibles",
+          content:
+            "Les comptes sont créés uniquement sur invitation depuis mon tableau de bord administrateur. Les utilisateurs inscrits se connectent sans mot de passe grâce à un lien magique. Il reste toutefois possible d’inviter une personne sans compte. Un lien privé associé à un token lui donne accès à l’événement, tandis que les notifications qui la concernent sont envoyées uniquement par e-mail.",
+        },
+        {
+          title: "Ma contribution",
+          content:
+            "J’ai assuré l’ensemble du projet en 14 jours, de la conception de l’interface et de la base de données jusqu’au développement front-end et back-end, à l’intégration, au domaine et à l’hébergement. L’IA m’a accompagné dans la recherche de l’interface visuelle. La principale difficulté a été de construire un système de notifications cohérent malgré les particularités de chaque plateforme.",
+        },
+      ],
+    },
+  },
+  {
     slug: "avec-fr",
     title: "Avec.fr",
     origin: "renfort",

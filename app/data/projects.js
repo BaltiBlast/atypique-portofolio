@@ -24,6 +24,10 @@ export const projects = [
         alt: "Personnage de la mariée explorant un campement en forêt dans Stellar Wedding.",
       },
       {
+        src: "/images/projects/stellar-wedding/cockpit.png",
+        alt: "Formulaire d’identification intégré au cockpit du vaisseau dans Stellar Wedding.",
+      },
+      {
         src: "/images/projects/stellar-wedding/space-traveling.png",
         alt: "Vaisseau spatial naviguant entre des astéroïdes dans Stellar Wedding.",
       },

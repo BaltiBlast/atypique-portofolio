@@ -1,7 +1,7 @@
 import LabHero from "./components/LabHero/LabHero";
 import LabProjects from "./components/LabProjects/LabProjects";
 import styles from "./page.module.css";
-import { labProjects } from "./labProjectsData";
+import { labProjects } from "@/app/data/projects";
 
 export const metadata = {
   title: "Le Lab",

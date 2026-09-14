@@ -1,7 +1,7 @@
 import ProjectsHero from "./components/ProjectsHero/ProjectsHero";
 import ProjectsList from "./components/ProjectsList/ProjectsList";
 import styles from "./page.module.css";
-import { projects } from "./projectsData";
+import { projects } from "@/app/data/projects";
 
 export const metadata = {
   title: "Projets",

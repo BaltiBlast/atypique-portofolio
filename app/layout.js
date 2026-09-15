@@ -16,6 +16,9 @@ const leagueGothic = League_Gothic({
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: "/icons/favicon.png",
+  },
   title: {
     default: "ATYPIQUE. | Studio indépendant de développement web",
     template: "%s | ATYPIQUE.",

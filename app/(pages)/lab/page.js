@@ -5,6 +5,7 @@ import { labProjects } from "@/app/data/projects";
 
 export const metadata = {
   title: "Le Lab",
+  alternates: { canonical: "/lab/" },
   description:
     "Le Lab ATYPIQUE. est consacré aux projets web expérimentaux, aux expériences interactives et aux idées qui sortent des sentiers battus.",
 };

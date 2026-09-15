@@ -2,6 +2,7 @@ import { Geist, League_Gothic } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/app/components/Navigation/Navigation";
 import Footer from "@/app/components/Footer/Footer";
+import { SITE_URL } from "@/app/site.config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,6 +15,7 @@ const leagueGothic = League_Gothic({
 });
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "ATYPIQUE. | Studio indépendant de développement web",
     template: "%s | ATYPIQUE.",

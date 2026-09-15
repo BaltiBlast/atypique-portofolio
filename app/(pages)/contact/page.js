@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 
 export const metadata = {
   title: "Contact",
+  alternates: { canonical: "/contact/" },
   description:
     "Parlons de votre projet : contactez ATYPIQUE. pour une mission freelance back-end ou la création complète de votre projet web.",
 };

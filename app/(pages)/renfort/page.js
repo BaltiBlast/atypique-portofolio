@@ -9,6 +9,7 @@ import { expertises, situations, technologies } from "./renfortData.js";
 
 export const metadata = {
   title: "Renfort back-end",
+  alternates: { canonical: "/renfort/" },
   description:
     "ATYPIQUE. : renfort freelance en développement back-end pour vos équipes et vos projets web. Parlons de votre projet.",
 };

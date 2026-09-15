@@ -8,6 +8,7 @@ import { method, needs, products, support } from "./studioData";
 
 export const metadata = {
   title: "Studio",
+  alternates: { canonical: "/studio/" },
   description:
     "Le Studio ATYPIQUE. : missions freelance en développement back-end et création complète de projets web. Parlons de votre projet.",
 };

@@ -135,6 +135,60 @@ export const projects = [
     },
   },
   {
+    slug: "oclock",
+    title: "O’Clock",
+    origin: "renfort",
+    originLabel: "Mission en renfort",
+    category: "Formation au développement web",
+    description:
+      "Des missions de formation en téléprésentiel consacrées principalement au développement back-end avec Node.js et Express.",
+    details:
+      "J’interviens auprès d’apprenants, majoritairement en reconversion professionnelle, dans le cadre de semaines de formation organisées par O’Clock. Chaque journée est consacrée à une notion du programme défini par l’école. J’anime les cours à distance de 9 h à 15 h, puis j’accompagne les apprenants qui souhaitent approfondir les notions abordées ou qui rencontrent des difficultés dans les exercices.",
+    objectives: [
+      "Transmettre les notions du programme à travers des cours journaliers en téléprésentiel.",
+      "Accompagner la pratique du back-end avec Node.js et Express, ainsi que les fondamentaux HTML et CSS.",
+      "Suivre chaque semaine la progression des apprenants et partager les besoins d’accompagnement identifiés.",
+      "Aider les apprenants à mieux comprendre la réalité du métier et les méthodes de travail attendues.",
+    ],
+    technologies: ["Node.js", "Express", "HTML", "CSS"],
+    images: [
+      {
+        src: "/images/projects/oclock/oclock-logo.png",
+        alt: "Logo de l’organisme de formation O’Clock.",
+      },
+    ],
+    imageFit: "contain",
+    status: "Missions ponctuelles récurrentes",
+    duration: "Une semaine par mission",
+    featureDuration: "Environ 20 missions par an",
+    availability: "Téléprésentiel",
+    liveUrl: null,
+    caseStudy: {
+      sections: [
+        {
+          title: "Les cours journaliers",
+          content:
+            "Chaque mission suit le programme fourni par O’Clock. J’anime une journée de cours de 9 h à 15 h autour d’une notion dédiée, principalement en développement back-end avec Node.js et Express, mais également en HTML et CSS. Le format en téléprésentiel permet d’alterner explications, démonstrations et mise en pratique.",
+        },
+        {
+          title: "L’accompagnement des apprenants",
+          content:
+            "Mon intervention se poursuit après les cours auprès des personnes qui ont besoin d’explications supplémentaires ou qui rencontrent des difficultés dans les exercices liés aux notions de la journée. Cet accompagnement me permet de reprendre les points moins bien assimilés et d’orienter les apprenants dans leur manière d’aborder un problème.",
+        },
+        {
+          title: "Le suivi hebdomadaire",
+          content:
+            "À la fin de chaque semaine, je partage mon appréciation sur l’évolution de chaque apprenant afin que les éventuels besoins de suivi puissent être identifiés et pris en charge. La majorité des personnes accompagnées étant en reconversion professionnelle, j’échange aussi avec elles sur la réalité du métier de développeur et sur l’état d’esprit nécessaire pour progresser.",
+        },
+        {
+          title: "Le rythme des missions",
+          content:
+            "Une mission correspond à une semaine complète de formation. J’interviens à une fréquence soutenue, à raison d’environ vingt missions par an.",
+        },
+      ],
+    },
+  },
+  {
     slug: "the-photobooth-project",
     title: "The Photobooth Project",
     origin: "lab",

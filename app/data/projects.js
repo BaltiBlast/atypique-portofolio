@@ -33,15 +33,15 @@ export const projects = [
     ],
     images: [
       {
-        src: "/images/projects/event/event-dashboard.png",
+        src: "/images/projects/event/event-dashboard.webp",
         alt: "Tableau de bord de Gros Event présentant les événements organisés et les invitations reçues.",
       },
       {
-        src: "/images/projects/event/create-event.png",
+        src: "/images/projects/event/create-event.webp",
         alt: "Interface de création d’un événement avec sélection des listes de contacts et des invités.",
       },
       {
-        src: "/images/projects/event/dashboard-user.png",
+        src: "/images/projects/event/dashboard-user.webp",
         alt: "Profil utilisateur de Gros Event avec les préférences de notification par canal.",
       },
     ],
@@ -219,15 +219,15 @@ export const projects = [
     ],
     images: [
       {
-        src: "/images/projects/photobooth/main-title.png",
+        src: "/images/projects/photobooth/main-title.webp",
         alt: "Interface de validation d’une photo affichée sur la borne d’arcade The Photobooth Project.",
       },
       {
-        src: "/images/projects/photobooth/arcade-cabinet.png",
+        src: "/images/projects/photobooth/arcade-cabinet.webp",
         alt: "Borne d’arcade créée pour The Photobooth Project avec appareil photo, écran et boutons lumineux.",
       },
       {
-        src: "/images/projects/photobooth/galery.png",
+        src: "/images/projects/photobooth/galery.webp",
         alt: "Galerie privée de The Photobooth Project présentant les photos à télécharger.",
       },
     ],
@@ -289,15 +289,15 @@ export const projects = [
     ],
     images: [
       {
-        src: "/images/projects/carrousel-guinguette/home.png",
+        src: "/images/projects/carrousel-guinguette/home.webp",
         alt: "Page d’accueil du Carrousel présentant la guinguette et ses prochains événements.",
       },
       {
-        src: "/images/projects/carrousel-guinguette/event-details.png",
+        src: "/images/projects/carrousel-guinguette/event-details.webp",
         alt: "Page détaillée d’un événement du Carrousel avec son formulaire de réservation.",
       },
       {
-        src: "/images/projects/carrousel-guinguette/dashboard-admin.png",
+        src: "/images/projects/carrousel-guinguette/dashboard-admin.webp",
         alt: "Tableau de bord du Carrousel permettant à l’administrateur de gérer les événements.",
       },
     ],
@@ -347,19 +347,19 @@ export const projects = [
     technologies: ["Phaser.js", "HTML", "CSS", "Node.js", "Express", "SheetDB", "Google Sheets"],
     images: [
       {
-        src: "/images/projects/stellar-wedding/screen-title.png",
+        src: "/images/projects/stellar-wedding/screen-title.webp",
         alt: "Écran d’accueil en pixel art de Stellar Wedding avec les deux personnages des mariés.",
       },
       {
-        src: "/images/projects/stellar-wedding/atrebois.png",
+        src: "/images/projects/stellar-wedding/atrebois.webp",
         alt: "Personnage de la mariée explorant un campement en forêt dans Stellar Wedding.",
       },
       {
-        src: "/images/projects/stellar-wedding/cockpit.png",
+        src: "/images/projects/stellar-wedding/cockpit.webp",
         alt: "Formulaire d’identification intégré au cockpit du vaisseau dans Stellar Wedding.",
       },
       {
-        src: "/images/projects/stellar-wedding/space-traveling.png",
+        src: "/images/projects/stellar-wedding/space-traveling.webp",
         alt: "Vaisseau spatial naviguant entre des astéroïdes dans Stellar Wedding.",
       },
     ],
